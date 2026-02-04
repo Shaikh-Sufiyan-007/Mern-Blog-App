@@ -5,6 +5,8 @@ import gradientBackground from '../assets/gradientBackground.png'
 import moment from 'moment'
 import { LuUser } from "react-icons/lu";
 import { FaFacebook, FaTwitter, FaGooglePlusG } from 'react-icons/fa'
+import Footer from '../components/Footer'
+import Loader from '../components/Loader'
 
 const Blog = () => {
   const {id} = useParams()
@@ -266,9 +268,11 @@ const Blog = () => {
             </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   ) : (
-    <div>Loading...</div>
+    <Loader />
   )
 }
 
