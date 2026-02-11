@@ -1,5 +1,5 @@
 import express from 'express'
-import { addBlog, deleteBlogById, getAllBlogs, getBlogById, togglePublish } from '../controllers/blog.controller.js'
+import { addBlog, addComment, deleteBlogById, getAllBlogs, getBlogById, getBlogComment, togglePublish } from '../controllers/blog.controller.js'
 import upload from '../middleware/multer.js'
 import { auth } from '../middleware/auth.js'
 
@@ -11,5 +11,8 @@ router.get('/all', getAllBlogs)
 router.get('/:blogId', getBlogById)
 router.delete('/delete', auth, deleteBlogById)
 router.post('/toggle-publish', auth, togglePublish)
+
+router.post("/add-comment", addComment);
+router.get("/comments", getBlogComment);
 
 export default router
