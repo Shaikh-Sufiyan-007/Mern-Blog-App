@@ -16,7 +16,7 @@ export const AppProvider = ({ children }) => {
 
     const fetchBlogs = async() => {
         try {
-            const {data} = await axios.get("/api/blogs/all");
+            const {data} = await axios.get("/api/blog/all");
             data.success ? setBlogs(data.blogs) : toast.error(data.message);
         } catch (error) {
             
@@ -37,7 +37,7 @@ export const AppProvider = ({ children }) => {
         axios, navigate, token, setToken, blogs, setBlogs, input, setInput
     }
     return (
-        <AppContext.Provider value={{}}>
+        <AppContext.Provider value={value}>
             {children}
         </AppContext.Provider>
     )
