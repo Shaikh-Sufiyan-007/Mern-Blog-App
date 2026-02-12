@@ -13,6 +13,6 @@ router.delete('/delete', auth, deleteBlogById)
 router.post('/toggle-publish', auth, togglePublish)
 
 router.post("/add-comment", addComment);
-router.get("/comments", getBlogComment);
+router.post("/comments", getBlogComment);
 
 export default router
