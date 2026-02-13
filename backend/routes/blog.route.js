@@ -9,7 +9,7 @@ const router = express.Router()
 router.post('/add', upload.single('image'), auth, addBlog)
 router.get('/all', getAllBlogs)
 router.get('/:blogId', getBlogById)
-router.delete('/delete', auth, deleteBlogById)
+router.post('/delete', auth, deleteBlogById)
 router.post('/toggle-publish', auth, togglePublish)
 
 router.post("/add-comment", addComment);
