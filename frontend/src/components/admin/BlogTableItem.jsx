@@ -7,7 +7,6 @@ const BlogTableItem = ({blog, fetchBlogs, index}) => {
 
     const {title, createdAt} = blog;
     const blogDate = new Date(createdAt)
-    console.log(blog._id)
     const {axios} = useAppContext()
 
     const deleteBlog = async() => {

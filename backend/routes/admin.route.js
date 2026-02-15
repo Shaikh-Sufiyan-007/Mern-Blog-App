@@ -7,7 +7,7 @@ const router = express.Router();
 router.post("/login", adminLogin);
 router.get('/comments', auth, getAllComments)
 router.get('/blogs', auth, getBlogsAdmin)
-router.delete('/delete-comment', auth, deleteCommentById)
+router.post('/delete-comment', auth, deleteCommentById)
 router.post('/approve-comment', auth, approveComment)
 router.get('/dashboard', auth, getDashboard);
 
